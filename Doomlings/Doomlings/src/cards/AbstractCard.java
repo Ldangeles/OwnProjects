@@ -1,15 +1,19 @@
 package cards;
 
-public abstract class AbstractCard implements Card {
+import java.util.ArrayList;
+
+public abstract class AbstractCard{
 
     private TraitColor traitColor;
-    private final TraitType traitType;
+    private TraitType traitType;
+    private ArrayList<ActionType> actions;
     private int faceValue;
     private final boolean dominant;
     private final String name;
     private int quantity;
 
-    public AbstractCard(TraitType traitType, TraitColor traitColor, int faceValue, boolean dominant, String name, int quantity){
+
+    public AbstractCard(TraitType traitType, TraitColor traitColor, int faceValue, boolean dominant, String name, int quantity,ArrayList<ActionType> actions){
         this.traitColor = traitColor;
         this.traitType = traitType;
         this.faceValue = faceValue;
@@ -18,37 +22,27 @@ public abstract class AbstractCard implements Card {
         this.quantity = quantity;
     }
 
-    @Override
     public TraitColor getColor() {
         return null;
     }
-
-    @Override
     public TraitType getType() {
         return null;
     }
-
-    @Override
     public int getFaceValue() {
         return 0;
     }
-
-    @Override
     public boolean isDominant() {
         return false;
     }
     public TraitColor getTraitColor() {
         return traitColor;
     }
-
     public TraitType getTraitType() {
         return traitType;
     }
-
     public String getName() {
         return name;
     }
-
     public int getQuantity() {
         return quantity;
     }
@@ -64,5 +58,8 @@ public abstract class AbstractCard implements Card {
                 '}';
     }
 
+    public ArrayList<ActionType> getActions() {
+        return actions;
+    }
 }
 

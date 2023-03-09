@@ -39,11 +39,9 @@ public enum EffectlessTraitsList {
     public String getName (){
         return name;
     }
-
     public int getQuantity() {
         return quantity;
     }
-
     public int getFaceValue() {
         return faceValue;
     }

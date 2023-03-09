@@ -24,32 +24,9 @@ public class Hand {
         toWhom.traits.add(trait);
     }
 
-    public boolean discard(AbstractCard abstractTrait, Hand discardPile){ //Discard a single trait to the Discard Pile
-        if(!traits.contains(abstractTrait)){
-            return false;
-        }
-        else{
-            traits.remove(abstractTrait);
-            discardPile.addTrait(abstractTrait);
-            return true;
-        }
-    }
-
     public void clear(){ //Clear all traits from a Hand
         traits.clear();
     }
-
-    /*public boolean steal (hands.Hand otherHand, card.Trait trait){
-        ArrayList otherHandTraits = otherHand.getTraits();
-        if(!otherHandTraits.isEmpty()){
-            return false;
-        }
-        else{
-            otherHandTraits.remove(trait);
-            traits.add(trait);
-            return true;
-        }
-    }*/
 
     public String showTraits(){ // Returns a string of all the traits in Hand
         String str = "";
